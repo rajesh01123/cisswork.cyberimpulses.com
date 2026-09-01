@@ -30,7 +30,7 @@ define( 'DB_USER', 'cyberimpulses-cisswork' );
 define( 'DB_PASSWORD', 'PoGWDVRlHWzR5qbhD1qh' );
 
 /** Database hostname */
-define( 'DB_HOST', '127.0.0.1:3306' );
+define( 'DB_HOST', '187.127.150.6:3306' );
 
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
@@ -98,6 +98,23 @@ define( 'CONCATENATE_SCRIPTS', false );
 define( 'AUTOSAVE_INTERVAL', 600 );
 define( 'WP_POST_REVISIONS', 5 );
 define( 'EMPTY_TRASH_DAYS', 21 );
+
+/* Use the appropriate site URL in local and live environments. */
+$wp_host = $_SERVER['HTTP_HOST'] ?? '';
+
+if (
+	$wp_host === 'localhost' ||
+	$wp_host === '127.0.0.1' ||
+	strpos( $wp_host, 'localhost:' ) === 0 ||
+	strpos( $wp_host, '127.0.0.1:' ) === 0
+) {
+	define( 'WP_HOME', 'http://localhost/cisswork.cyberimpulses.com' );
+	define( 'WP_SITEURL', 'http://localhost/cisswork.cyberimpulses.com' );
+} else {
+	define( 'WP_HOME', 'https://cisswork.cyberimpulses.com' );
+	define( 'WP_SITEURL', 'https://cisswork.cyberimpulses.com' );
+}
+
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
