@@ -117,9 +117,6 @@ if (
 	define( 'WP_SITEURL', $live_site_url );
 }
 
-define( 'CISS_LOCAL_SITE_URL', $local_site_url );
-define( 'CISS_LIVE_SITE_URL', $live_site_url );
-
 /* That's all, stop editing! Happy publishing. */
 
 /** Absolute path to the WordPress directory. */
