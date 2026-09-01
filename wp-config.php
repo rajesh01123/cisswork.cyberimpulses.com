@@ -100,6 +100,8 @@ define( 'WP_POST_REVISIONS', 5 );
 define( 'EMPTY_TRASH_DAYS', 21 );
 
 /* Use the appropriate site URL in local and live environments. */
+$local_site_url = 'http://localhost/cisswork.cyberimpulses.com';
+$live_site_url  = 'https://cisswork.cyberimpulses.com';
 $wp_host = $_SERVER['HTTP_HOST'] ?? '';
 
 if (
@@ -108,12 +110,15 @@ if (
 	strpos( $wp_host, 'localhost:' ) === 0 ||
 	strpos( $wp_host, '127.0.0.1:' ) === 0
 ) {
-	define( 'WP_HOME', 'http://localhost/cisswork.cyberimpulses.com' );
-	define( 'WP_SITEURL', 'http://localhost/cisswork.cyberimpulses.com' );
+	define( 'WP_HOME', $local_site_url );
+	define( 'WP_SITEURL', $local_site_url );
 } else {
-	define( 'WP_HOME', 'https://cisswork.cyberimpulses.com' );
-	define( 'WP_SITEURL', 'https://cisswork.cyberimpulses.com' );
+	define( 'WP_HOME', $live_site_url );
+	define( 'WP_SITEURL', $live_site_url );
 }
+
+define( 'CISS_LOCAL_SITE_URL', $local_site_url );
+define( 'CISS_LIVE_SITE_URL', $live_site_url );
 
 /* That's all, stop editing! Happy publishing. */
 
