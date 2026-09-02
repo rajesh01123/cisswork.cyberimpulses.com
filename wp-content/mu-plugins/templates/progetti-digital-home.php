@@ -60,6 +60,10 @@ $pds_header_logo_url = content_url( '/mu-plugins/assets/progetti-digital-header-
 		.pds-section-heading { max-width:670px; margin-bottom:44px; }
 		.pds-section-heading h2 { margin:0 0 15px; color:var(--pds-ink); font-size:clamp(32px,4vw,47px); line-height:1.1; letter-spacing:-.045em; }
 		.pds-section-heading p { margin:0; color:var(--pds-muted); font-size:17px; line-height:1.7; }
+		.pds-detail-link { display:inline-flex; align-items:center; gap:8px; margin-top:22px; color:var(--pds-blue); font-size:14px; font-weight:850; text-decoration:none; }
+		.pds-detail-link:hover { color:#0a4ea8; transform:translateX(3px); }
+		.pds-services-dark .pds-detail-link { color:#85cbff; }
+		.pds-band .pds-detail-link { color:var(--pds-gold); }
 		.pds-service-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
 		.pds-service { min-height:245px; padding:29px; border:1px solid #deebfa; border-radius:20px; background:rgba(255,255,255,.9); box-shadow:0 10px 28px rgba(21,68,129,.035); transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease; }
 		.pds-service:hover { transform:translateY(-7px); border-color:rgba(20,110,232,.32); box-shadow:0 22px 40px rgba(21,68,129,.13); }
@@ -228,7 +232,7 @@ $pds_header_logo_url = content_url( '/mu-plugins/assets/progetti-digital-header-
 		<div class="pds-shell pds-nav pds-reveal">
 			<a class="pds-brand" href="#top" aria-label="Progetti Digital Startup home"><img class="pds-header-logo" src="<?php echo esc_url( $pds_header_logo_url ); ?>" alt="Progetti Digital"></a>
 			<nav class="pds-nav-links" aria-label="Primary navigation">
-				<a href="#services">Services</a><a href="#process">Process</a><a href="#about">About</a><a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>">Blog</a><a href="<?php echo esc_url( home_url( '/careers/' ) ); ?>">Careers</a><a href="#contact">Contact</a>
+				<a href="<?php echo esc_url( home_url( '/services/' ) ); ?>">Services</a><a href="<?php echo esc_url( home_url( '/process/' ) ); ?>">Process</a><a href="<?php echo esc_url( home_url( '/about/' ) ); ?>">About</a><a href="<?php echo esc_url( home_url( '/blog/' ) ); ?>">Blog</a><a href="<?php echo esc_url( home_url( '/careers/' ) ); ?>">Careers</a><a href="<?php echo esc_url( home_url( '/contact/' ) ); ?>">Contact</a>
 			</nav>
 			<a class="pds-button" href="#contact">Start a project <span aria-hidden="true">→</span></a>
 		</div>
@@ -260,7 +264,7 @@ $pds_header_logo_url = content_url( '/mu-plugins/assets/progetti-digital-header-
 
 		<section class="pds-section pds-services-dark" id="services">
 			<div class="pds-shell">
-				<div class="pds-section-heading pds-reveal"><p class="pds-eyebrow">What we do</p><h2>One product partner from first sketch to <span>confident launch.</span></h2><p>We bring strategy, experience design, and engineering together so your product is useful, scalable, and ready for the next stage.</p></div>
+				<div class="pds-section-heading pds-reveal"><p class="pds-eyebrow">What we do</p><h2>One product partner from first sketch to <span>confident launch.</span></h2><p>We bring strategy, experience design, and engineering together so your product is useful, scalable, and ready for the next stage.</p><a class="pds-detail-link" href="<?php echo esc_url( home_url( '/services/' ) ); ?>">Explore all services &rarr;</a></div>
 				<div class="pds-service-grid">
 					<article class="pds-service pds-reveal"><div class="pds-service-icon">⌘</div><h3>Custom Software</h3><p>Purpose-built platforms, internal tools, and SaaS products designed around the way your business actually works.</p></article>
 					<article class="pds-service pds-reveal"><div class="pds-service-icon">◫</div><h3>Web Applications</h3><p>Fast, intuitive web experiences that help customers act, teams collaborate, and businesses scale online.</p></article>
@@ -275,13 +279,13 @@ $pds_header_logo_url = content_url( '/mu-plugins/assets/progetti-digital-header-
 		<section class="pds-section pds-band" id="about">
 			<div class="pds-shell pds-band-grid">
 				<div class="pds-reveal"><p class="pds-eyebrow">Why Progetti Digital</p><h2>Startup speed.<br><span>Engineering discipline.</span></h2><p>Great software starts with listening. We work alongside your team, make the hard decisions visible, and deliver in small, valuable steps.</p></div>
-				<ul class="pds-list pds-reveal" style="--pds-delay:140ms"><li>A focused team that speaks in outcomes, not buzzwords.</li><li>Transparent delivery from scope and architecture through launch.</li><li>Flexible engagement for a new idea, a product rebuild, or an ambitious next release.</li></ul>
+				<div class="pds-reveal" style="--pds-delay:140ms"><ul class="pds-list"><li>A focused team that speaks in outcomes, not buzzwords.</li><li>Transparent delivery from scope and architecture through launch.</li><li>Flexible engagement for a new idea, a product rebuild, or an ambitious next release.</li></ul><a class="pds-detail-link" href="<?php echo esc_url( home_url( '/about/' ) ); ?>">Meet our approach &rarr;</a></div>
 			</div>
 		</section>
 
 		<section class="pds-section pds-section--white" id="process">
 			<div class="pds-shell">
-				<div class="pds-section-heading pds-reveal"><p class="pds-eyebrow" style="color:#146ee8">How we work</p><h2>A clear path from opportunity to <span>working software.</span></h2></div>
+				<div class="pds-section-heading pds-reveal"><p class="pds-eyebrow" style="color:#146ee8">How we work</p><h2>A clear path from opportunity to <span>working software.</span></h2><a class="pds-detail-link" href="<?php echo esc_url( home_url( '/process/' ) ); ?>">See the full process &rarr;</a></div>
 				<div class="pds-process">
 					<article class="pds-step pds-reveal"><div class="pds-step-number"></div><h3>Discover</h3><p>Understand your customers, goals, constraints, and the opportunity worth solving.</p></article>
 					<article class="pds-step pds-reveal"><div class="pds-step-number"></div><h3>Define</h3><p>Shape the roadmap, user flows, and technical plan around the highest-value release.</p></article>

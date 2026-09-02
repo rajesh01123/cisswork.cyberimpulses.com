@@ -54,6 +54,9 @@ function pds_utility_page_from_request() {
 		'terms-and-conditions' => 'terms',
 		'privacy-policy'       => 'privacy',
 		'contact'              => 'contact',
+		'services'             => 'services',
+		'process'              => 'process',
+		'about'                => 'about',
 		'blog'                 => 'blog',
 		'careers'              => 'careers',
 	);
@@ -140,6 +143,9 @@ function pds_utility_page_title( $title ) {
 		'terms'   => 'Terms & Conditions',
 		'privacy' => 'Privacy Policy',
 		'contact' => 'Contact Us',
+		'services' => 'Services',
+		'process'  => 'Our Process',
+		'about'    => 'About Us',
 		'blog'    => 'Insights',
 		'careers' => 'Careers',
 	);
@@ -161,6 +167,9 @@ function pds_seo_context() {
 		'terms'   => array( 'path' => 'terms-conditions/', 'title' => 'Terms & Conditions | Progetti Digital Startup', 'description' => 'Read the terms and conditions for working with Progetti Digital Startup.', 'type' => 'WebPage' ),
 		'privacy' => array( 'path' => 'privacy-policy/', 'title' => 'Privacy Policy | Progetti Digital Startup', 'description' => 'Learn how Progetti Digital Startup collects, uses, and protects personal information.', 'type' => 'WebPage' ),
 		'contact' => array( 'path' => 'contact/', 'title' => 'Contact Progetti Digital Startup | Start Your Software Project', 'description' => 'Contact Progetti Digital Startup to discuss custom software, web applications, mobile products, and digital transformation.', 'type' => 'ContactPage' ),
+		'services' => array( 'path' => 'services/', 'title' => 'Software Development Services | Progetti Digital Startup', 'description' => 'Explore custom software, web application, mobile product, UI/UX, cloud automation, and product support services from Progetti Digital Startup.', 'type' => 'ServicePage' ),
+		'process'  => array( 'path' => 'process/', 'title' => 'Our Software Delivery Process | Progetti Digital Startup', 'description' => 'See how Progetti Digital Startup takes digital products from discovery and planning through design, development, launch, and growth.', 'type' => 'WebPage' ),
+		'about'    => array( 'path' => 'about/', 'title' => 'About Progetti Digital Startup', 'description' => 'Learn about the product-minded approach, values, and working principles behind Progetti Digital Startup.', 'type' => 'AboutPage' ),
 		'blog'    => array( 'path' => 'blog/', 'title' => 'Software Development Insights | Progetti Digital Startup', 'description' => 'Practical insights on product strategy, custom software development, web applications, and digital growth.', 'type' => 'CollectionPage' ),
 		'careers' => array( 'path' => 'careers/', 'title' => 'Careers | Progetti Digital Startup', 'description' => 'Explore careers at Progetti Digital Startup for people who care about software, design, and digital products.', 'type' => 'CollectionPage' ),
 	);
@@ -316,7 +325,7 @@ function pds_serve_custom_sitemap() {
 		return;
 	}
 
-	$paths   = array( '', 'blog/', 'contact/', 'careers/', 'terms-conditions/', 'privacy-policy/' );
+	$paths   = array( '', 'services/', 'process/', 'about/', 'blog/', 'contact/', 'careers/', 'terms-conditions/', 'privacy-policy/' );
 	$lastmod = gmdate( 'c', filemtime( __FILE__ ) );
 
 	status_header( 200 );
